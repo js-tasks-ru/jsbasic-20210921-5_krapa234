@@ -40,8 +40,9 @@ export default class CartIcon {
     updatePosition() {
 
         const elemSize = this.elem.offsetWidth && this.elem.offsetHeight;
+        const container = document.querySelector('.container');
         const leftIndent = Math.min(
-            document.querySelector('.container').getBoundingClientRect().right + 20,
+            container.getBoundingClientRect().right + 20,
             document.documentElement.clientWidth - this.elem.offsetWidth - 10
         ) + 'px';
         const isMobile = document.documentElement.clientWidth <= 767;
